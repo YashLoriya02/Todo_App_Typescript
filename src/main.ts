@@ -58,7 +58,7 @@ const generateTodoAndRender = (title: string, isCompleted: boolean, id: string) 
     }
   }
 
-  // Creating Paragraph for Title
+  // Creating Paragraph tag for Title
   const paragraph = document.createElement('p') as HTMLParagraphElement
   paragraph.innerText = title
   paragraph.className = isCompleted ? 'cut' : "mainTitle"
@@ -69,7 +69,7 @@ const generateTodoAndRender = (title: string, isCompleted: boolean, id: string) 
   deleteBtn.innerText = "Delete"
   deleteBtn.onclick = () => deleteTodo(id)
 
-  // Rendering Todos in HTML Window
+  // Rendering Todos in todosContainer div
   inner.append(checkbox, paragraph)
   generatedTodo.append(inner, deleteBtn)
   todosContainer.append(generatedTodo)
@@ -77,7 +77,6 @@ const generateTodoAndRender = (title: string, isCompleted: boolean, id: string) 
 
 const deleteTodo = (id: string) => {
   const idx = todos.findIndex(todo => todo.id === id)
-
   todos.splice(idx, 1)
   saveTodos(todos)
   renderTodos(todos)

@@ -71,7 +71,7 @@
 }
 
 .mainTitle {
-  font-size: 2rem;
+  font-size: 1.8rem;
 }
 
 .deleteBtn {
@@ -92,7 +92,7 @@
 
 .cut {
   text-decoration: line-through;
-  font-size: 2rem;
+  font-size: 1.8rem;
 }
 
 .no-todo {
@@ -102,8 +102,5 @@
 }
 
 input[type="checkbox"] {
-  transform: scale(2);
-  margin-right: 10px;
-  background-color: grey;
-  color: red;
+  transform: scale(1.75);
 }
